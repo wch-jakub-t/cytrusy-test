@@ -16,6 +16,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
+	<script>
+    function promptPassword() {
+        const correctPassword = 'cytrusy-test';
+        let userPassword = prompt('Podaj hasło:');
+
+        if (userPassword === correctPassword) {
+            document.getElementById('content').style.display = 'block';
+        } else {
+            alert('Nieprawidłowe hasło. Strona nie jest dostępna.');
+            // Jeśli hasło jest nieprawidłowe, możemy odświeżyć stronę lub wywołać prompt ponownie
+            promptPassword();
+        }
+    }
+
+    promptPassword();
+</script>
 <div id="wrapper" class="wrapper">
     <div class="header__top">
         <div class="header__top__social">
